@@ -2,9 +2,6 @@ import * as React from "react";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
-import Thumbnail from "./Thumbnail";
-
-import { images } from "../constants";
 
 const Gallery = () => (
   <>
@@ -31,6 +28,21 @@ const Gallery = () => (
           <button
             type="button"
             style={{ position: "absolute", right: 50, bottom: 50 }}
+            sx={{
+              appearance: "none",
+              display: "inline-block",
+              textAlign: "center",
+              lineHeight: "inherit",
+              textDecoration: "none",
+              fontSize: "inherit",
+              fontWeight: "bold",
+              m: 0,
+              px: 4,
+              py: 2,
+              border: 0,
+              borderRadius: 4,
+              variant: "buttons.primary",
+            }}
           >
             next
           </button>
@@ -55,21 +67,6 @@ const Gallery = () => (
             left: 50%;
             transform: translateX(-50%);
             pointer-events: none;
-        }
-
-        button {
-          cursor: pointer;
-          border: 0;
-          border-radius: 2px;
-          padding: 6px 20px;
-          min-width: 140px;
-          font-size: 16px;
-          font-weight: 400;
-        }
-          
-        button:hover {
-          background: black;
-          color: white;
         }
 
         .gallery {
